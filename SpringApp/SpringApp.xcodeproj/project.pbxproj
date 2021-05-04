@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				CB1840F9F34A807CE893221E /* Pods-SpringApp.debug.xcconfig */,
 				C20486A27D2C9417AFD1C152 /* Pods-SpringApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,47 @@
 		A73F882D26418ACC00A2BAB3 /* SpringApp */ = {
 			isa = PBXGroup;
 			children = (
-				A73F882E26418ACC00A2BAB3 /* AppDelegate.swift */,
-				A73F883026418ACC00A2BAB3 /* SceneDelegate.swift */,
-				A73F883226418ACC00A2BAB3 /* ViewController.swift */,
-				A73F883426418ACC00A2BAB3 /* Main.storyboard */,
-				A73F883726418ACD00A2BAB3 /* Assets.xcassets */,
-				A73F883926418ACD00A2BAB3 /* LaunchScreen.storyboard */,
-				A73F883C26418ACD00A2BAB3 /* Info.plist */,
+				A73F884226418C7E00A2BAB3 /* Supporting */,
+				A73F884326418C8F00A2BAB3 /* ViewControllers */,
+				A73F884426418C9C00A2BAB3 /* Storyboards */,
+				A73F884526418CAB00A2BAB3 /* Resources */,
 			);
 			path = SpringApp;
+			sourceTree = "<group>";
+		};
+		A73F884226418C7E00A2BAB3 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A73F882E26418ACC00A2BAB3 /* AppDelegate.swift */,
+				A73F883026418ACC00A2BAB3 /* SceneDelegate.swift */,
+				A73F883C26418ACD00A2BAB3 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		A73F884326418C8F00A2BAB3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A73F883226418ACC00A2BAB3 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A73F884426418C9C00A2BAB3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A73F883426418ACC00A2BAB3 /* Main.storyboard */,
+				A73F883926418ACD00A2BAB3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A73F884526418CAB00A2BAB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A73F883726418ACD00A2BAB3 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JX7HPBVUY;
-				INFOPLIST_FILE = SpringApp/Info.plist;
+				INFOPLIST_FILE = SpringApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +409,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JX7HPBVUY;
-				INFOPLIST_FILE = SpringApp/Info.plist;
+				INFOPLIST_FILE = SpringApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
