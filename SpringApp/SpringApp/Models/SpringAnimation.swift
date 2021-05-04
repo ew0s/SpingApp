@@ -10,8 +10,8 @@ import UIKit
 struct SpringAnimation {
     let animation: String
     let curve: String
-    let duration: CGFloat
-    let force: CGFloat
+    let duration: String
+    let force: String
 }
 
 extension SpringAnimation {
@@ -26,8 +26,8 @@ extension SpringAnimation {
                 let springAnimation = SpringAnimation(
                     animation: animation,
                     curve: curve,
-                    duration: CGFloat.random(in: 0...1.5),
-                    force: CGFloat.random(in: 0...1.5)
+                    duration: CGFloat.random(in: 0...1.5).description,
+                    force: CGFloat.random(in: 0...1.5).description
                 )
                 
                 springAnimations.append(springAnimation)
