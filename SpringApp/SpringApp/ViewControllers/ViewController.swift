@@ -36,13 +36,13 @@ class ViewController: UIViewController {
         
         animationSpringView.animation = currentAnimation.animation
         animationSpringView.curve = currentAnimation.curve
-        animationSpringView.duration = currentAnimation.duration
-        animationSpringView.force = currentAnimation.force
+        animationSpringView.duration = stringToCGFloat(currentAnimation.duration)
+        animationSpringView.force = stringToCGFloat(currentAnimation.force)
         
         startAnimationSpringButton.animation = currentAnimation.animation
         startAnimationSpringButton.curve = currentAnimation.curve
-        startAnimationSpringButton.duration = currentAnimation.duration
-        startAnimationSpringButton.force = currentAnimation.force
+        startAnimationSpringButton.duration = stringToCGFloat(currentAnimation.duration)
+        startAnimationSpringButton.force = stringToCGFloat(currentAnimation.force)
         
         animationSpringView.animate()
         startAnimationSpringButton.animate()
@@ -82,7 +82,15 @@ extension ViewController {
         
         animationLabel.text = currentAnimation.animation
         curveLabel.text = currentAnimation.curve
-        durationLabel.text = String(format: "%.3f", currentAnimation.duration)
-        forceLabel.text = String(format: "%.3f", currentAnimation.force)
+        durationLabel.text = String(format: "%.3f", stringToCGFloat(currentAnimation.duration))
+        forceLabel.text = String(format: "%.3f", stringToCGFloat(currentAnimation.force))
+    }
+    
+    private func stringToCGFloat(_ value: String) -> CGFloat {
+        guard let valueAsDouble = Double(value) else {
+            return 0
+        }
+        
+        return CGFloat(valueAsDouble)
     }
 }
