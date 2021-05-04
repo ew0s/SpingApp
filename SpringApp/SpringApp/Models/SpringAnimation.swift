@@ -17,9 +17,6 @@ struct SpringAnimation {
 extension SpringAnimation {
     public static func getData() -> [SpringAnimation] {
         
-        let defaultDuration: CGFloat = 1
-        let defaultForce: CGFloat = 1
-        
         let animationDataManager = AnimationInfoDataManager.shared
         var springAnimations: [SpringAnimation] = []
         
@@ -29,8 +26,8 @@ extension SpringAnimation {
                 let springAnimation = SpringAnimation(
                     animation: animation,
                     curve: curve,
-                    duration: defaultDuration,
-                    force: defaultForce
+                    duration: CGFloat.random(in: 0...1.5),
+                    force: CGFloat.random(in: 0...1.5)
                 )
                 
                 springAnimations.append(springAnimation)
