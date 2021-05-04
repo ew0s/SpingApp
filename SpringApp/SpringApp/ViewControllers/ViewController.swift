@@ -17,7 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet var animationSpringView: SpringView!
     @IBOutlet var buttonBackgroundView: UIView!
     @IBOutlet var startAnimationSpringButton: SpringButton!
-
+    
+    @IBOutlet var animationLabel: UILabel!
+    @IBOutlet var curveLabel: UILabel!
+    @IBOutlet var durationLabel: UILabel!
+    @IBOutlet var forceLabel: UILabel!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +53,7 @@ class ViewController: UIViewController {
         }
         
         setCurrentButtonTitle()
+        setAnimationInfo()
     }
 }
 
@@ -60,6 +66,7 @@ extension ViewController {
         buttonBackgroundView.roundCorners(with: [.layerMinXMinYCorner, .layerMaxXMinYCorner],
                                           radius: buttonBackgroundView.frame.height / 2)
         setCurrentButtonTitle()
+        setAnimationInfo()
     }
     
     private func setCurrentButtonTitle() {
@@ -67,5 +74,15 @@ extension ViewController {
         let curve = animationsData[animationIndex].curve
         startAnimationSpringButton.setTitle(
             "\(animation) - \(curve)", for: .normal)
+    }
+    
+    private func setAnimationInfo() {
+        
+        let currentAnimation = animationsData[animationIndex]
+        
+        animationLabel.text = currentAnimation.animation
+        curveLabel.text = currentAnimation.curve
+        durationLabel.text = String(format: "%.3f", currentAnimation.duration)
+        forceLabel.text = String(format: "%.3f", currentAnimation.force)
     }
 }
