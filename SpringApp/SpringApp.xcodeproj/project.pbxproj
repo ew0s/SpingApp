@@ -14,6 +14,7 @@
 		A73F883626418ACC00A2BAB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73F883426418ACC00A2BAB3 /* Main.storyboard */; };
 		A73F883826418ACD00A2BAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73F883726418ACD00A2BAB3 /* Assets.xcassets */; };
 		A73F883B26418ACD00A2BAB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73F883926418ACD00A2BAB3 /* LaunchScreen.storyboard */; };
+		A73F88492641943A00A2BAB3 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73F88482641943A00A2BAB3 /* ExtensionUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A73F883726418ACD00A2BAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73F883A26418ACD00A2BAB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A73F883C26418ACD00A2BAB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A73F88482641943A00A2BAB3 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		C20486A27D2C9417AFD1C152 /* Pods-SpringApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringApp.release.xcconfig"; path = "Target Support Files/Pods-SpringApp/Pods-SpringApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB1840F9F34A807CE893221E /* Pods-SpringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringApp.debug.xcconfig"; path = "Target Support Files/Pods-SpringApp/Pods-SpringApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		A73F882D26418ACC00A2BAB3 /* SpringApp */ = {
 			isa = PBXGroup;
 			children = (
+				A73F88462641941E00A2BAB3 /* Core */,
 				A73F884226418C7E00A2BAB3 /* Supporting */,
 				A73F884326418C8F00A2BAB3 /* ViewControllers */,
 				A73F884426418C9C00A2BAB3 /* Storyboards */,
@@ -121,6 +124,22 @@
 				A73F883726418ACD00A2BAB3 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A73F88462641941E00A2BAB3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A73F88472641942300A2BAB3 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A73F88472641942300A2BAB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A73F88482641943A00A2BAB3 /* ExtensionUIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +258,7 @@
 			files = (
 				A73F883326418ACC00A2BAB3 /* ViewController.swift in Sources */,
 				A73F882F26418ACC00A2BAB3 /* AppDelegate.swift in Sources */,
+				A73F88492641943A00A2BAB3 /* ExtensionUIView.swift in Sources */,
 				A73F883126418ACC00A2BAB3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
